@@ -4,12 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nexa creador de firmas</title>
+    <style>
+        .form-container{
+            display: flex;
+            flex-flow: column;
+            align-items: flex-start;
+            justify-content: center;
+        }
+        .form-container input[type="text"]{
+            display: block;
+            padding: 1em;
+            min-width: 240px;
+        }
+        .button{
+            background: #29ABE2;
+            color: white;
+            border: none;
+            box-shadow: none;
+            padding: 1em;
+            font-family: Arial, Helvetica, sans-serif;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-    <div id="firma-container">
-    <!-- <img src="logo-nexa.png" alt="NEXA Soluciones"> -->
-        <h1 id="name">Franc</h1>
-        <h2 id="position">Webamaster</h2>
+
+    <div id="firma-container" style="font-family: Helvetica, Calbri, sans-seriif; color: #005a96; font-size: 12px; line-height: 10px;">
+        <p style="font-size: 14px; line-height: 5px; font-weight: bold;" id="name">Francisco</p>
+        <p style="font-size: 14px; line-height: 1px; opacity: 0.8;" id="position">Web</p>
+        <div style="width: 240px;" class="logo-container">
+            <img style="width: 100%; height: auto;" src="http://nexasoluciones.com/logo-nexa.png" alt="NEXA Soluciones">
+        </div>
+        <p>
+            <span style="font-weight: bold; color: #A6CE39;">O</span>
+            <a style="color: #005A96 !important;" href="tel:5524650547">5524650547</a>
+            <span id="show-m" style="font-weight: bold; color: #A6CE39;">P</span>
+            <a id="mobile" style="color: #005A96 !important;" href="tel:5524650547">5524650547</a>
+        </p>
+        <p>Planta El Fuerte 11-B, Col. Electra, Tlalnepantla Estado de México CP. 52900</p>
+        <span>
+            <a style="color: #29ABE2 !important;" id="email" href="#">email@email.com</a> 
+            <span style="font-weight: bold; color: #A6CE39;">|</span>
+            <a style="color: #29ABE2 !important;" href="http://nexasoluciones.com" target="_blank">http://nexasoluciones.com</a>
+        </span>
+        
+        
     </div> 
+    <hr style="margin: 2em 0 2em 0;">
+    <div class="form-container">
+        <form>
+            <input type="text" name="name" placeholder="Nombre" />
+            <input type="text" name="position" placeholder="Puesto" />
+            <input type="text" name="mobile" placeholder="Teléfono" />
+            <input type="text" name="email" placeholder="email" />
+            <button class="button" type="submit">Crear</button>
+        </form>
+    </div>
 </body>
 </html>

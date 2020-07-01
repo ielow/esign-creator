@@ -1,12 +1,13 @@
 const {resolve,join}= require('path');
 const htmlWebpackPlugin = require('html-webpack-plugin');
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 
 module.exports={
-    mode:'development',
+    mode:'production',
     entry: './src/index.js',
     output: {
         filename:'main.js',
-        path: resolve(__dirname,'dist')
+        path: resolve( __dirname, 'dist' )
     },
     module:{
         rules:[
@@ -14,11 +15,12 @@ module.exports={
         ]
     },
     devServer:{
-        contentBase: join(__dirname,'dist'),
-        compress: true,
-        port: 4000
+        open: true,
+        port: 3000,
+        clientLogLevel: 'error'
     },
     plugins:[
+        new CleanWebpackPlugin({ cleanStaleWebpackAssets: true }),
         new htmlWebpackPlugin({
             template: './src/index.html',
             inject: true
